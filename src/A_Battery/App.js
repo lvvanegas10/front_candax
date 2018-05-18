@@ -3,6 +3,7 @@ import axios from 'axios'
 import Tree from 'react-d3-tree';
 import Navbar from '../Navbar'
 import {Panel} from 'react-bootstrap';
+import Websocket from 'react-websocket';
 
 const myTreeData = [
   {
@@ -57,7 +58,7 @@ class App extends Component {
       {
           var houses1=[];
           for(var house in data[0]['children'][resUnit]['children']){
-              if(data[0]['children'][resUnit]['children'][house]['nodeSvgShape']['shapeProps']['fill'] === 'red'){
+              if(data[0]['children'][resUnit]['children'][house]['nodeSvgShape']['shapeProps']['fill'] === '#FF8000'){
                   houses1.push(data[0]['children'][resUnit]['children'][house])
               }
           }
@@ -66,6 +67,13 @@ class App extends Component {
       }
       var toAppend = [{'name':data[0]['name'], 'children':children_ps }];
       this.setState({dataAlarm1: toAppend});
+  }
+
+  handleData(data) {
+    var newData = data;
+    var dataFinal =[];
+    dataFinal.push(JSON.parse(newData));
+    this.filterData(dataFinal);
   }
 
   render() {
@@ -101,6 +109,7 @@ class App extends Component {
               </Panel.Body>
             </Panel>
         </div>
+        <Websocket url='ws://localhost:8000/socket' onMessage={this.handleData.bind(this)}/>
       </div>
     );
   }
