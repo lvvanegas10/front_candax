@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import App from './App';
+import TreeAll from './TreeAll';
 
 class Home extends Component {
   // calls the login method in authentication service
@@ -18,7 +19,7 @@ class Home extends Component {
         {
           isAuthenticated() &&
           <div className="container column" style={{width: '100%', height: '100%'}}>
-            <App />
+            <TreeAll />
           </div>
         }
         {
