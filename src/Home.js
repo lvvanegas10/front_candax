@@ -19,9 +19,6 @@ class Home extends Component {
     const { isAuthenticated } = this.props.auth;
     return (
       <div style={{width: '100%', height: '100%'}}>
-	{/* <PageHeader style={{width: '100%', height: '10%'}}>
-          <small> Gestión de Alarmas </small>
-        </PageHeader> */}
         {
           isAuthenticated() &&
           <div className="container column" style={{width: '100%', height: '100%'}}>
@@ -40,7 +37,14 @@ class Home extends Component {
         {
           !isAuthenticated() && (
             <div style={{width: '100%', height: '100%'}}>
-              <h5>
+              {/* <h6>This is the default <b><code>Home</code></b> component. The <b><code>App</code></b> component will only be visible once you authenticate.</h6> */}
+              <ControlledCarousel />
+              <Navbar>
+                <Nav>
+                    <NavItem onClick={this.login}> Ingresar </NavItem>
+                </Nav>
+              </Navbar>
+              {/* <h5>
                 {' '}
                 <a
                   style={{ cursor: 'pointer' }}
@@ -49,11 +53,7 @@ class Home extends Component {
                   Ingresa Aquí!
                 </a>
                 {' '}
-              </h5>
-              {/* <h6>This is the default <b><code>Home</code></b> component. The <b><code>App</code></b> component will only be visible once you authenticate.</h6> */}
-              <div style={{width: '100%', height: '100%'}}>
-                <ControlledCarousel />
-              </div>
+              </h5> */}
             </div>
           )
         }
