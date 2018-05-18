@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import App from './App';
 import TreeAll from './TreeAll';
 import ControlledCarousel from './Carousel.js';
-import {PageHeader, Navbar, Nav, NavItem} from 'react-bootstrap';
+import {Navbar, Nav, NavItem} from 'react-bootstrap';
 
 
 class Home extends Component {
