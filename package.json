@@ -5,8 +5,14 @@
   "dependencies": {
     "@appbaseio/reactivesearch": "^1.2.0",
     "auth0-js": "^8.9.3",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "axios": "^0.18.0",
+    "react": "^15.6.2",
+    "react-bootstrap": "^0.32.1",
+    "react-bootstrap-navbar": "^1.1.0",
+    "react-bootstrap-validation": "^0.1.11",
+    "react-d3-tree": "^1.10.6",
+    "react-dom": "^15.6.2",
+    "react-navbar": "^1.1.1",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {

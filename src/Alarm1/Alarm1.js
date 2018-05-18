@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import App from './App';
 
-class Home extends Component {
+class Alarm1 extends Component {
   // calls the login method in authentication service
   login = () => {
     this.props.auth.login();
@@ -18,7 +18,7 @@ class Home extends Component {
         {
           isAuthenticated() &&
           <div className="container column" style={{width: '100%', height: '100%'}}>
-            <App />
+            <App style={{width: '100%', height: '100%'}}/>
           </div>
         }
         {
@@ -35,7 +35,7 @@ class Home extends Component {
                 </a>
                 {' '}to continue.
               </h5>
-              <h6>This is the default <b><code>Home</code></b> component. The <b><code>App</code></b> component will only be visible once you authenticate.</h6>
+              <h6>This is the default <b><code>Alarm1</code></b> component. The <b><code>App</code></b> component will only be visible once you authenticate.</h6>
             </div>
           )
         }
@@ -44,4 +44,4 @@ class Home extends Component {
     }
   }
 
-  export default Home;
+  export default Alarm1;
