@@ -26,15 +26,6 @@ class Home extends Component {
           isAuthenticated() &&
           <div className="container column" style={{width: '100%', height: '100%'}}>
             <TreeAll />
-	    <h5>
-              You are logged in!{' '}
-              <a
-                style={{ cursor: 'pointer' }}
-                onClick={this.logout}
-              >
-                Log Out
-              </a>.
-            </h5>
           </div>
         }
         {
