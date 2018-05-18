@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import App from './App';
-import TreeAll from './TreeAll';
-import ControlledCarousel from './Carousel.js';
-import {PageHeader, Navbar, Nav, NavItem} from 'react-bootstrap';
+import Header from './components/Header';
+import Info from './components/Info';
+// import Carousel from "./Carousel";
 
 
 class Home extends Component {
@@ -18,15 +18,11 @@ class Home extends Component {
     // calls the isAuthenticated method in authentication service
     const { isAuthenticated } = this.props.auth;
     return (
-      <div style={{width: '100%', height: '100%'}}>
-	{/* <PageHeader style={{width: '100%', height: '10%'}}>
-          <small> Gestión de Alarmas </small>
-        </PageHeader> */}
+      <div>
         {
           isAuthenticated() &&
-          <div className="container column" style={{width: '100%', height: '100%'}}>
-            <TreeAll />
-	    <h5>
+          <div className="container column">
+            <h5>
               You are logged in!{' '}
               <a
                 style={{ cursor: 'pointer' }}
@@ -35,25 +31,26 @@ class Home extends Component {
                 Log Out
               </a>.
             </h5>
+            <App />
           </div>
         }
         {
           !isAuthenticated() && (
-            <div style={{width: '100%', height: '100%'}}>
+            <div className="container column">
+              <Header />
+              <h5>ReactiveSearch Auth0 Example</h5>
               <h5>
                 {' '}
                 <a
                   style={{ cursor: 'pointer' }}
                   onClick={this.login}
                 >
-                  Ingresa Aquí!
+                  Log in
                 </a>
                 {' '}
               </h5>
-              {/* <h6>This is the default <b><code>Home</code></b> component. The <b><code>App</code></b> component will only be visible once you authenticate.</h6> */}
-              <div style={{width: '100%', height: '100%'}}>
-                <ControlledCarousel />
-              </div>
+              <h6>This is the default <b><code>Home</code></b> component. The <b><code>App</code></b> component will only be visible once you authenticate.</h6>
+              <Info />
             </div>
           )
         }
