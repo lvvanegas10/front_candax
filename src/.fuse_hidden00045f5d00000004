@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import App from './App';
-import TreeAll from './TreeAll';
 import ControlledCarousel from './Carousel.js';
 import {PageHeader, Navbar, Nav, NavItem} from 'react-bootstrap';
 
@@ -18,15 +17,14 @@ class Home extends Component {
     // calls the isAuthenticated method in authentication service
     const { isAuthenticated } = this.props.auth;
     return (
-      <div style={{width: '100%', height: '100%'}}>
-	{/* <PageHeader style={{width: '100%', height: '10%'}}>
+      <div>
+        {/* <PageHeader style={{width: '100%', height: '10%'}}>
           <small> Gestión de Alarmas </small>
         </PageHeader> */}
         {
           isAuthenticated() &&
-          <div className="container column" style={{width: '100%', height: '100%'}}>
-            <TreeAll />
-	    <h5>
+          <div className="container column">
+            <h5>
               You are logged in!{' '}
               <a
                 style={{ cursor: 'pointer' }}
@@ -35,6 +33,7 @@ class Home extends Component {
                 Log Out
               </a>.
             </h5>
+            <App />
           </div>
         }
         {
