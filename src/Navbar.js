@@ -14,6 +14,7 @@ class NavBar extends Component {
                 <NavItem href="/motion" eventKey={2}>Movimiento detectado </NavItem>
                 <NavItem href="/door">Puerta abierta  </NavItem>
                 <NavItem href="/battery">Bateria Baja </NavItem>
+                <NavItem href="/number">Claves</NavItem>
                 <NavItem href="/lock">Fallo cerradura</NavItem>
                 <NavItem href="/hub">Fallo hub </NavItem>
             </Nav>

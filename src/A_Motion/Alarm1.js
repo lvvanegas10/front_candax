@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import App from './App';
 
-class Alarm1 extends Component {
+class AMotion extends Component {
   // calls the login method in authentication service
   login = () => {
     this.props.auth.login();
@@ -35,7 +35,7 @@ class Alarm1 extends Component {
                 </a>
                 {' '}to continue.
               </h5>
-              <h6>This is the default <b><code>Alarm1</code></b> component. The <b><code>App</code></b> component will only be visible once you authenticate.</h6>
+              <h6>This is the default <b><code>AMotion</code></b> component. The <b><code>App</code></b> component will only be visible once you authenticate.</h6>
             </div>
           )
         }
@@ -44,4 +44,4 @@ class Alarm1 extends Component {
     }
   }
 
-  export default Alarm1;
+  export default AMotion;

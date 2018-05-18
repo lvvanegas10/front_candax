@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import Tree from 'react-d3-tree';
 import Navbar from './Navbar'
+import Conventions from './Conventions'
 import {Panel} from 'react-bootstrap';
 import Websocket from 'react-websocket';
 
@@ -77,6 +78,7 @@ class TreeAll extends Component {
                                                                                                                     }.bind(this)
                                                                                                                   }/>
         </div>
+          <Conventions/>
         <div>
             <Panel>
               <Panel.Heading>Casa: {this.state.house}</Panel.Heading>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import App from './App';
 
-class ABattery extends Component {
+class ALock extends Component {
   // calls the login method in authentication service
   login = () => {
     this.props.auth.login();
@@ -35,7 +35,7 @@ class ABattery extends Component {
                 </a>
                 {' '}to continue.
               </h5>
-              <h6>This is the default <b><code>ABattery</code></b> component. The <b><code>App</code></b> component will only be visible once you authenticate.</h6>
+              <h6>This is the default <b><code>ALock</code></b> component. The <b><code>App</code></b> component will only be visible once you authenticate.</h6>
             </div>
           )
         }
@@ -44,4 +44,4 @@ class ABattery extends Component {
     }
   }
 
-  export default ABattery;
+  export default ALock;

@@ -5,6 +5,8 @@ import ANumber from './A_Number_Attemps/Alarm1';
 import AMotion from './A_Motion/Alarm1';
 import ADoor from './A_Door/Alarm1';
 import ABattery from './A_Battery/Alarm1';
+import AHub from './A_Hub/Alarm1';
+import ALock from './A_Lock/Alarm1';
 import Callback from './Callback';
 import Auth from './auth';
 import history from './history';
@@ -26,7 +28,8 @@ const Routes = () => (
       <Route path="/motion" render={(props) => <AMotion auth={auth} {...props} />} />
       <Route path="/door" render={(props) => <ADoor auth={auth} {...props} />} />
       <Route path="/battery" render={(props) => <ABattery auth={auth} {...props} />} />
-
+      <Route path="/hub" render={(props) => <AHub auth={auth} {...props} />} />
+      <Route path="/lock" render={(props) => <ALock auth={auth} {...props} />} />
       <Route path="/callback" render={(props) => {
         handleAuthentication(props);
         return <Callback {...props} />

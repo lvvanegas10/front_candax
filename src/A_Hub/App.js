@@ -59,7 +59,7 @@ class App extends Component {
       {
           var houses1=[];
           for(var house in data[0]['children'][resUnit]['children']){
-              if(data[0]['children'][resUnit]['children'][house]['nodeSvgShape']['shapeProps']['fill'] === '#FF8000'){
+              if(data[0]['children'][resUnit]['children'][house]['nodeSvgShape']['shapeProps']['fill'] === "#088A08"){
                   houses1.push(data[0]['children'][resUnit]['children'][house])
               }
           }

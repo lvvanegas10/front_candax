@@ -4,6 +4,8 @@ import Tree from 'react-d3-tree';
 import Navbar from '../Navbar'
 import {Panel} from 'react-bootstrap';
 import Websocket from 'react-websocket';
+import Conventions from '../Conventions';
+
 
 const myTreeData = [
   {
@@ -58,7 +60,7 @@ class App extends Component {
       {
           var houses1=[];
           for(var house in data[0]['children'][resUnit]['children']){
-              if(data[0]['children'][resUnit]['children'][house]['nodeSvgShape']['shapeProps']['fill'] === '#FF8000'){
+              if(data[0]['children'][resUnit]['children'][house]['nodeSvgShape']['shapeProps']['fill'] === "#D7DF01"){
                   houses1.push(data[0]['children'][resUnit]['children'][house])
               }
           }
@@ -95,6 +97,7 @@ class App extends Component {
                                                                                                                     }.bind(this)
                                                                                                                   }/>
         </div>
+        <Conventions/>
         <div>
             <Panel>
               <Panel.Heading>Casa: {this.state.house}</Panel.Heading>
