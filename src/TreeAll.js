@@ -59,7 +59,7 @@ class TreeAll extends Component {
       <div style={{width: '100%', height: '100%'}}>
         <Navbar/>
         <div style={containerStyles} ref={tc => (this.treeContainer = tc)}>
-         <Tree data={this.state.data} orientation = 'vertical' translate={this.state.translate} onClick= {this.houseDetail(this)}/>
+         <Tree data={this.state.data} orientation = 'vertical' translate={this.state.translate} onClick= {this.houseDetail()}/>
         </div>
         <div>
             <Panel>
