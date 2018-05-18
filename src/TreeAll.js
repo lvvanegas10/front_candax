@@ -19,7 +19,7 @@ const myTreeData = [
 
 const containerStyles = {
   width: '100%',
-  height: '60%',
+  height: '60%'
 }
 
 class TreeAll extends Component {
@@ -29,10 +29,10 @@ class TreeAll extends Component {
     this.state ={
       data: myTreeData,
       house: 'Seleccione una casa',
-      name:'a',
-      last_name:'b',
-      res_unit:'c',
-      email:'d'
+      name:'',
+      last_name:'',
+      res_unit:'',
+      email:''
     }
 
     var newData = []
@@ -50,28 +50,36 @@ class TreeAll extends Component {
     });
   }
 
-  houseDetail(nodeData, evt){
-      console.log(nodeData);
-  };
-
   render() {
     return (
       <div style={{width: '100%', height: '100%'}}>
         <Navbar/>
         <div style={containerStyles} ref={tc => (this.treeContainer = tc)}>
-         <Tree data={this.state.data} orientation = 'vertical' translate={this.state.translate} onClick= {this.houseDetail()}/>
+         <Tree data={this.state.data} orientation = 'vertical' translate={this.state.translate} onClick= {function a(nodeData, evt)
+                                                                                                                    {
+                                                                                                                      if(nodeData.name.startsWith("H")){
+                                                                                                                          axios.get('http://localhost:8000/house_detail' + nodeData.name).then(response => {
+                                                                                                                            this.setState({name: response.data.name});
+                                                                                                                            this.setState({last_name: response.data.last_name});
+                                                                                                                            this.setState({email: response.data.email});
+                                                                                                                            this.setState({res_unit: response.data.res_unit});
+                                                                                                                            this.setState({house: response.data.house});
+                                                                                                                          })
+                                                                                                                        }
+                                                                                                                    }.bind(this)
+                                                                                                                  }/>
         </div>
         <div>
             <Panel>
-              <Panel.Heading>{this.state.house}</Panel.Heading>
+              <Panel.Heading>Casa: {this.state.house}</Panel.Heading>
               <Panel.Body>
-              {this.state.name}
+              Nombre: {this.state.name}
               <hr/>
-              {this.state.last_name}
+              Apellido: {this.state.last_name}
               <hr/>
-              {this.state.email}
+              Email: {this.state.email}
               <hr/>
-              {this.state.res_unit}
+              Unidad Residencial: {this.state.res_unit}
               </Panel.Body>
             </Panel>
         </div>
