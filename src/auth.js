@@ -5,12 +5,12 @@ import history from './history';
 export default class Auth {
   // Please use your own credentials here
   auth0 = new auth0.WebAuth({
-    domain: 'divyanshu.auth0.com',
-    clientID: 'TJyKPI6aRiRwgr6SxlT7ExW10NEHW4Vy',
-    redirectUri: process.env.NODE_ENV === 'development' ? 'http://localhost:3000/callback' : 'https://appbaseio-apps.github.io/reactivesearch-auth0-example/callback',
-    audience: 'https://divyanshu.auth0.com/userinfo',
+    domain: 'isis2503-sjimenez16.auth0.com',
+    clientID: 'nLwyBu4kSyfuyR3zqq_F7tQKbNQ355_s',
+    redirectUri: 'http://157.253.213.213:3000/callback',
+    audience: 'https://isis2503-sjimenez16.auth0.com/userinfo',
     responseType: 'token id_token',
-    scope: 'openid'
+    scope: 'openid profile'
   });
 
   login = () => {

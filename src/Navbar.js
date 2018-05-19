@@ -10,8 +10,8 @@ class NavBar extends Component {
       <div>
           <Navbar>
             <Nav>
-                <NavItem href="/" eventKey={1}>Todas</NavItem>
-                <NavItem href="/motion" eventKey={2}>Movimiento detectado </NavItem>
+                <NavItem href="/">Todas</NavItem>
+                <NavItem href="/motion">Movimiento detectado </NavItem>
                 <NavItem href="/door">Puerta abierta  </NavItem>
                 <NavItem href="/battery">Bateria Baja </NavItem>
                 <NavItem href="/number">Claves</NavItem>
