@@ -8,11 +8,7 @@ class NavBar extends Component {
 
     return (
       <div>
-          <Navbar>
-            <Nav>
-                <NavItem onClick={this.logout}> Salir </NavItem>
-            </Nav>
-          </Navbar>
+
           <Navbar>
             <Nav>
                 <NavItem href="/">Todas</NavItem>

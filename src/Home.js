@@ -21,7 +21,12 @@ class Home extends Component {
         {
           isAuthenticated() &&
           <div className="container column" style={{width: '100%', height: '100%'}}>
-            <TreeAll />
+            <Navbar>
+              <Nav>
+                  <NavItem onClick={this.logout}> Salir </NavItem>
+              </Nav>
+            </Navbar>
+              <TreeAll />
           </div>
         }
         {
