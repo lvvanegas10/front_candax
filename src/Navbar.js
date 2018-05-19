@@ -10,6 +10,11 @@ class NavBar extends Component {
       <div>
           <Navbar>
             <Nav>
+                <NavItem onClick={this.logout}> Salir </NavItem>
+            </Nav>
+          </Navbar>
+          <Navbar>
+            <Nav>
                 <NavItem href="/">Todas</NavItem>
                 <NavItem href="/motion">Movimiento detectado </NavItem>
                 <NavItem href="/door">Puerta abierta  </NavItem>
