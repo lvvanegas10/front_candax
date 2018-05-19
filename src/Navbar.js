@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
-
+import MiModal from './Modal1';
 
 class NavBar extends Component {
 
@@ -8,7 +8,7 @@ class NavBar extends Component {
 
     return (
       <div>
-
+          <MiModal/>
           <Navbar>
             <Nav>
                 <NavItem href="/">Todas</NavItem>

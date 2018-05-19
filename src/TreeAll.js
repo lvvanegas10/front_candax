@@ -6,6 +6,7 @@ import Conventions from './Conventions'
 import {Panel} from 'react-bootstrap';
 import Websocket from 'react-websocket';
 
+
 const myTreeData = [
   {
     name: 'Parent Node',
@@ -62,7 +63,9 @@ class TreeAll extends Component {
   render() {
     return (
       <div style={{width: '100%', height: '100%'}}>
+        
         <Navbar/>
+        
         <div style={containerStyles} ref={tc => (this.treeContainer = tc)}>
          <Tree data={this.state.data} orientation = 'vertical' translate={this.state.translate} onClick= {function a(nodeData, evt)
                                                                                                                     {
@@ -78,6 +81,9 @@ class TreeAll extends Component {
                                                                                                                     }.bind(this)
                                                                                                                   }/>
         </div>
+        {/* <div id = "holaaaaaaawi">
+         <MiModal/>
+        </div> */}
           <Conventions/>
         <div>
             <Panel>

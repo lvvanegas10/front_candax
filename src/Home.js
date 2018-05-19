@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TreeAll from './TreeAll';
+
 import ControlledCarousel from './Carousel.js';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
 
@@ -26,7 +27,8 @@ class Home extends Component {
                   <NavItem onClick={this.logout}> Salir </NavItem>
               </Nav>
             </Navbar>
-              <TreeAll />
+            
+            <TreeAll />
           </div>
         }
         {
